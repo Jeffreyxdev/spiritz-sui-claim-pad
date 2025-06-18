@@ -1,15 +1,16 @@
 
 import PixilatedLogo from "@/components/PixilatedLogo";
-import WalletConnectButton from "@/components/WalletConnectButton";
+// import WalletConnectButton from "@/components/WalletConnectButton";
 import ClaimSection from "@/components/ClaimSection";
 import WaitlistForm from "@/components/WaitlistForm";
 import FAQSection from "@/components/FAQSection";
 import FooterLinks from "@/components/FooterLinks";
 import { useState, useMemo } from "react";
+import hero from "../../public/Aquessa.png"
 
 // Placeholder hero blue pixel image (see context)
 const HERO_IMAGE =
-  "https://images.unsplash.com/photo-1470813740244-df37b8c1edcb?auto=format&fit=crop&w=900&q=80";
+  hero
 
 // Desktop-focused full-width layout!
 const Index = () => {
@@ -23,18 +24,26 @@ const Index = () => {
       <header className="flex flex-col md:flex-row items-center justify-between py-10 px-8 max-w-6xl mx-auto">
         <PixilatedLogo />
         <div className="mt-4 md:mt-0">
-          <WalletConnectButton />
+      
         </div>
       </header>
-      <main className="flex flex-col items-center w-full">
+      <main className="flex flex-col items-center w-[100%  ] md:w-[60%] mx-auto">
+        <div className="text-center mb-8 mt-10">
+          <h1 className="font-pixel text-3xl md:text-4xl text-bluepixel-100 mb-2">
+            Welcome to the <span className="text-bluepixel-300">SUI Spiritz NFT</span> Whitelist!
+          </h1>
+          <p className="text-bluepixel-200 font-mono text-lg md:text-xl">
+            Claim your exclusive SUI Spiritz NFT as an early supporter of the Sui ecosystem.
+          </p>
+        </div>
         <section className="w-full flex flex-col md:flex-row items-center justify-center gap-10 py-8 md:py-16 px-4 md:px-0 max-w-6xl mx-auto">
           <div className="md:flex-1 flex flex-col items-center md:items-start text-center md:text-left">
             <h1 className="font-pixel text-[2.4rem] md:text-5xl leading-tight text-bluepixel-100 mb-6 drop-shadow-lg">
               Claim Your <span className="text-bluepixel-300">SUI Spiritz NFT</span> <br className="hidden md:block" />
-              (Pixilated Blue Drop)
+              <span className="text-bluepixel-200">Early SUI Supporters</span>
             </h1>
             <div className="text-bluepixel-200 font-mono text-lg md:text-xl mb-7 max-w-xl">
-              Only for <span className="text-bluepixel-100 font-semibold">eligible Sui wallets</span>. Not eligible yet? Join the waitlist to get notified!
+              Only for <span className="text-bluepixel-100 font-semibold">eligible Sui wallets</span>. Not eligible yet? Join the whitelist to be eligible!
             </div>
             <WaitlistForm />
           </div>
